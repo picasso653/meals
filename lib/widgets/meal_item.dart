@@ -16,6 +16,7 @@ class MealItem extends StatelessWidget {
               placeholder: MemoryImage(kTransparentImage),
               image: NetworkImage(meal.imageUrl),
             ),
+            // I've become lazy again
             Positioned(
               right: 0,
               left: 0,
