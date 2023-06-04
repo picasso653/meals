@@ -36,9 +36,10 @@ class MealItem extends StatelessWidget {
               height: 200,
               width: double.infinity,
             ),
+            // let me write
             Positioned(
-              right: 0,
-              left: 0,
+              right: 12,
+              left: 12,
               top: 0,
               bottom: 0,
               child: Container(
