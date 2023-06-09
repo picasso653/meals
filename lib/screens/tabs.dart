@@ -30,12 +30,12 @@ class _TabsScreenState extends State<TabsScreen> {
         _favoriteMeals.remove(meal);
       });
 
-      _showInfoMessage('Meal is not a favorite');
+      _showInfoMessage('Removed frpm favorite meals');
     } else {
       setState(() {
         _favoriteMeals.add(meal);
       });
-      _showInfoMessage('Meal is a favorite');
+      _showInfoMessage('Favorite meal added');
     }
   }
 
