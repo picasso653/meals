@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals/models/meal.dart';
 import 'package:meals/screens/categories.dart';
+import 'package:meals/screens/filters.dart';
 import 'package:meals/screens/meals.dart';
 import 'package:meals/widgets/main_drawer.dart';
 
@@ -31,7 +32,7 @@ class _TabsScreenState extends State<TabsScreen> {
         _favoriteMeals.remove(meal);
       });
 
-      _showInfoMessage('Removed frpm favorite meals');
+      _showInfoMessage('Removed from favorite meals');
     } else {
       setState(() {
         _favoriteMeals.add(meal);
@@ -47,9 +48,13 @@ class _TabsScreenState extends State<TabsScreen> {
   }
 
   void _setScreen(String identifier) {
-    if (identifier == 'fiters') {
-    } else {
-      Navigator.of(context).pop();
+    Navigator.of(context).pop();
+    if (identifier == 'filters') {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: ((ctx) => const FiltersScreen()),
+        ),
+      );
     }
   }
 
