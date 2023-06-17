@@ -89,7 +89,6 @@ class _TabsScreenState extends State<TabsScreen> {
       }
       return true;
     }).toList();
-    // ignore: unused_local_variable
     Widget activePage = CategoriesScreen(
       onToggleFavorites: _toggleMealFavoriteStatus,
       availableMeals: availableMeals,

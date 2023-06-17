@@ -67,7 +67,6 @@ class MainDrawer extends StatelessWidget {
             ),
             onTap: () {
               onSelectScreen('filters');
-              ;
             },
           )
         ],
