@@ -74,4 +74,3 @@ class MainDrawer extends StatelessWidget {
     );
   }
 }
-// Apparently the codes for this app is done temporarily
