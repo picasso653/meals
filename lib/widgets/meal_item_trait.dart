@@ -26,7 +26,7 @@ class MealItemTrait extends StatelessWidget {
         const SizedBox(
           width: 6,
         ),
-        // Displaying a 'Text' widget with the provided 'label' data.
+        
         Text(
           label,
           style: const TextStyle(color: Colors.white),

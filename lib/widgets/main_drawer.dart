@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 class MainDrawer extends StatelessWidget {
+  // Constructor for the MainDrawer class which takes a function 'onSelectScreen'
   const MainDrawer({super.key, required this.onSelectScreen});
 
+  // Function that will be called when a menu item is selected
   final void Function(String identifier) onSelectScreen;
+
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return Drawer( // Create a Drawer widget
       child: Column(
         children: [
+          // Drawer header with a gradient background
           DrawerHeader(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
@@ -18,6 +22,7 @@ class MainDrawer extends StatelessWidget {
               ], begin: Alignment.topLeft, end: Alignment.bottomRight),
             ),
             child: Row(children: [
+              // Icon for the app
               Icon(
                 Icons.fastfood,
                 size: 48,
@@ -26,6 +31,7 @@ class MainDrawer extends StatelessWidget {
               const SizedBox(
                 width: 18,
               ),
+              // Title of the app
               Text(
                 'Cooking Up!',
                 style: Theme.of(context)
@@ -35,6 +41,7 @@ class MainDrawer extends StatelessWidget {
               )
             ]),
           ),
+          // Menu item for 'Meals'
           ListTile(
             leading: Icon(
               Icons.restaurant,
@@ -49,9 +56,11 @@ class MainDrawer extends StatelessWidget {
                   ),
             ),
             onTap: () {
+              // When 'Meals' is tapped, call the 'onSelectScreen' function with 'meals' identifier
               onSelectScreen('meals');
             },
           ),
+          // Menu item for 'Filters'
           ListTile(
             leading: Icon(
               Icons.settings,
@@ -66,6 +75,7 @@ class MainDrawer extends StatelessWidget {
                   ),
             ),
             onTap: () {
+              // When 'Filters' is tapped, call the 'onSelectScreen' function with 'filters' identifier
               onSelectScreen('filters');
             },
           )
