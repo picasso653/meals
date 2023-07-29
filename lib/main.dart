@@ -1,10 +1,7 @@
-// Importing necessary packages and dependencies
 import 'package:flutter/material.dart';
 
-// Importing Google Fonts for custom text styles
 import 'package:google_fonts/google_fonts.dart';
 
-// Importing the 'TabsScreen' widget from the 'tabs.dart' file
 import 'package:meals/screens/tabs.dart';
 
 // Defining a custom theme for the app using the 'ThemeData' class
@@ -46,11 +43,8 @@ class App extends StatelessWidget {
       // Setting 'debugShowCheckedModeBanner' to 'false' removes the "Debug" banner
       // that appears on the top right corner of the app while in debug mode.
       debugShowCheckedModeBanner: false,
-
-      // Applying the custom 'theme' defined earlier to the app.
       theme: theme,
 
-      // Setting the 'TabsScreen' widget as the home screen of the app.
       home: const TabsScreen(),
     );
   }
