@@ -116,11 +116,11 @@ class _TabsScreenState extends State<TabsScreen> {
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.set_meal),
-              label: "Categories",
+              label: "The Categories",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.star),
-              label: 'Favorites',
+              label: 'Your Favorites',
             ),
           ]),
     );

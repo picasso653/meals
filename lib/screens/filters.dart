@@ -42,7 +42,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
         }
       })),
       appBar: AppBar(
-        title: const Text('Your Filters'),
+        title: const Text('Filters'),
       ),
       body: WillPopScope(
         onWillPop: () async {
