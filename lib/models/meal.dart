@@ -41,3 +41,4 @@ class Meal {
   final bool isVegan;
   final bool isVegetarian;
 }
+// Let's leave this comment here
