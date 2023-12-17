@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:meals/screens/tabs.dart';
@@ -25,7 +27,11 @@ final theme = ThemeData(
 // The main entry point of the Flutter app.
 void main() {
   // Running the app by calling 'runApp()' and passing the 'App' widget as the root of the widget tree.
-  runApp(const App());
+  runApp(
+    const ProviderScope(
+      child: App(),
+    ),
+  );
 }
 
 // Defining the 'App' class, which extends 'StatelessWidget'.
