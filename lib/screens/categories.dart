@@ -21,11 +21,10 @@ class _CategoriesScreenState extends State<CategoriesScreen>
   void initState() {
     super.initState();
     _animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 300),
-      lowerBound: 0,
-      upperBound: 1
-    );
+        vsync: this,
+        duration: const Duration(milliseconds: 300),
+        lowerBound: 0,
+        upperBound: 1);
     _animationController.forward();
   }
 
@@ -37,7 +36,11 @@ class _CategoriesScreenState extends State<CategoriesScreen>
 
   void _selectedCategory(BuildContext context, Category category) {
     final filteredMeals = widget.availableMeals
-        .where((meal) => meal.categories.contains(category.id))
+        .where(
+          (meal) => meal
+          .categories
+          .contains(category.id),
+        )
         .toList();
     Navigator.of(context).push(
       MaterialPageRoute(
@@ -70,12 +73,15 @@ class _CategoriesScreenState extends State<CategoriesScreen>
             )
         ],
       ),
-      builder: (context, child) => Padding(
-        padding: EdgeInsets
-        .only(
-          top: 100 - _animationController.value * 100),
-        child: child,
-      ),
+      builder: (context, child) => SlideTransition(
+          position: Tween(
+            begin: const Offset(0, 0.3),
+            end: const Offset(0, 0),
+          ).animate(
+            CurvedAnimation(
+                parent: _animationController, curve: Curves.easeInOut),
+          ),
+          child: child),
     );
   }
 }
